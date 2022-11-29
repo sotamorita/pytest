@@ -1,0 +1,10 @@
+version: '3.9'
+services:
+  python3:
+    restart: always
+    build: ./docker/python
+    container_name: 'py39_pytest'
+    working_dir: '/root/src'
+    tty: true
+    volumes:
+      - ./src:/root/src
